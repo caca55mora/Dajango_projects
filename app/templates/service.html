@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<html>
+    <head></head>
+    <body id="image" style="background-image: url('{% static 'images/servicing.jpg' %}'); background-size: 1600px 800px;">
+        
+        <div id="div" class=" ">
+            <h2 class="featurette-heading"><a name="OUR SERVICES"></a>OUR SERVICES<span class="text-muted"></span></h2>
+            <p class="lead" ><b>Full Servicing</b></p>
+            <p class="lead"><b>Repair </b></p>
+            <p class="lead"><b>Parts Replacement </b></p>
+            <p class="lead"><b>Exchange </b></p>
+            
+        </div>  
+        
+        <style>
+            #div {
+               
+                text-align: center;
+                padding: 200px;
+                font-style: bold;
+            }
+
+           
+        </style>
+    </body>
+</html>
+
+{% endblock %}

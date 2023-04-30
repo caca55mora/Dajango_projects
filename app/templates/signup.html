@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  index
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+
+<h1 style="text-align: center;">Register here</h1>
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-6 offset-3">
+            <div class="border p-3 bg-light">
+                <form method="POST"> 
+                    {% csrf_token %}
+                    {{ form|crispy }}
+
+                    <div class="text-center">
+                        <input type="submit" value="Register" class="btn btn-secondary"> <br>
+                        <small class="text-muted">
+                            Already Have An Account? <a class="ml-2" href="{% url 'signin' %}">Login here</a>
+                        </small>
+                    </div>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+
+{% endblock %}

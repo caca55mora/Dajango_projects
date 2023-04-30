@@ -1,0 +1,71 @@
+
+{% load static %}
+<html>
+    <head>
+        <title>
+            Home </title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="{% static '/images/bajajlpgo.png' %}" height="40%" width="40%" alt="Logo" class="img-fluid" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/index">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/service">Our Services</a>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                      <!-- Left links -->
+                    <button type="button" class="btn btn-primary me-3"> <a class="dropdown-item" href="{% url 'register' %}">Register</a>  
+
+                    <button type="button" class="btn btn-primary me-3"> <a class="dropdown-item" href="/signin/">Login</a>  
+                    
+                          
+                        </button>
+                        
+                </div>
+                
+            </div>
+           
+        </nav>
+        
+
+        {% block content %}
+        {% endblock %}
+        <script src="{%static 'js/jquery-1.11.2.min.js' %}"></script>
+        <script src="{%static 'js/bootstrap.min.js' %"></script>
+        <div id="div" class=" " alig="center" color="btn-primary">
+            <h2 class="featurette-heading"><a name="CONTACT US"></a><span class="text-muted"></span></h2>
+            <p class="lead" > <b>Naraynthan Auto Trading Pvt. Ltd</b></p>
+            <p class="lead" ><b>Contact number:- 01-4720809<b></p>
+            <p class="lead"><b>Maharajgunj, Chakrapath, kathmandu, Nepal<b></p>
+           
+            
+        </div>  
+        <style>
+            #div {
+               
+                text-align: center;
+                text-decoration-color: blue;
+                font-style: bold;
+            }
+
+           
+        </style>
+        
+    </body>
+</html>
+
